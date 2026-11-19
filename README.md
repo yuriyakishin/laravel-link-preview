@@ -35,10 +35,10 @@ After the report, a short guide explains how to refresh a cached preview: Facebo
 ## Installation
 
 ```bash
-composer require yu-laravel/laravel-link-preview
+composer require yu-laravel/link-preview
 ```
 
-This also installs [`yu-laravel/laravel-web-tools-core`](https://github.com/yuriyakishin/laravel-web-tools-core). Both service providers are discovered automatically.
+This also installs [`yu-laravel/web-tools-core`](https://github.com/yuriyakishin/laravel-web-tools-core). Both service providers are discovered automatically.
 
 ## Usage
 
@@ -51,8 +51,8 @@ Put the component on a page whose layout includes `@livewireStyles` and `@livewi
 Import the styles into your CSS build:
 
 ```css
-@import "../../vendor/yu-laravel/laravel-web-tools-core/resources/css/web-tools-core.css";
-@import "../../vendor/yu-laravel/laravel-link-preview/resources/css/link-preview.css";
+@import "../../vendor/yu-laravel/web-tools-core/resources/css/web-tools-core.css";
+@import "../../vendor/yu-laravel/link-preview/resources/css/link-preview.css";
 ```
 
 To match your site's colours and fonts, override the `--wt-*` variables (see [Web Tools Core](https://github.com/yuriyakishin/laravel-web-tools-core#styles)).
