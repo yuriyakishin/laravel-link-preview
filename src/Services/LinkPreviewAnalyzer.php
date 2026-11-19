@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Yu\LinkPreview\Services;
 
 use Yu\LinkPreview\Checks;

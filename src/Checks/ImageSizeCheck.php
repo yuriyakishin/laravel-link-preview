@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Yu\LinkPreview\Checks;
 
 use Yu\LinkPreview\Data\Snapshot;
