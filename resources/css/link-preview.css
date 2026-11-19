@@ -1,0 +1,50 @@
+/*
+ * Link preview: approximate cards of each network and the "how to refresh" block.
+ * Uses the --wt-* variables of web-tools-core.css. The cards are neutral on purpose: no logos or brand styles.
+ */
+
+.lp-previews, .lp-refresh { margin-top: 32px; padding: 26px 28px; border: 1px solid var(--wt-line); border-radius: 16px; background: var(--wt-surface); }
+.lp-previews h3, .lp-refresh h3 { margin: 0; font-size: 20px; font-weight: 600; }
+.lp-note { margin: 4px 0 0; font-size: 13px; color: var(--wt-muted); }
+.lp-previews + .wt-report { margin-top: 20px; }
+.lp-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px; margin-top: 20px; }
+
+.lp-p { display: grid; align-content: start; gap: 8px; margin: 0; }
+.lp-p figcaption { display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 600; color: var(--wt-text); }
+.lp-icon { flex: none; width: 16px; height: 16px; color: var(--wt-text); }
+/* Brand colours from Simple Icons; X is black, so it follows the text colour and stays visible in the dark theme */
+.lp-telegram .lp-icon { color: #26a5e4; }
+.lp-facebook .lp-icon { color: #0866ff; }
+.lp-linkedin .lp-icon { color: #0a66c2; }
+.lp-viber .lp-icon { color: #7360f2; }
+.lp-whatsapp .lp-icon { color: #25d366; }
+.lp-card { overflow: hidden; border: 1px solid var(--wt-line); border-radius: 10px; background: var(--wt-bg); font-size: 14px; line-height: 1.35; }
+.lp-img { display: block; width: 100%; aspect-ratio: 1.91; object-fit: cover; background: var(--wt-line); }
+.lp-body { display: grid; gap: 3px; padding: 10px 12px; min-width: 0; }
+.lp-title { font-weight: 600; color: var(--wt-text); overflow-wrap: anywhere; }
+.lp-text { color: var(--wt-text-2); overflow-wrap: anywhere; }
+.lp-domain { font-size: 12.5px; color: var(--wt-muted); }
+.lp-site { font-weight: 600; color: var(--wt-accent); }
+
+/* Small card: a square thumbnail at the side */
+.lp-small { display: grid; grid-template-columns: 1fr 76px; }
+.lp-small .lp-img { grid-column: 2; grid-row: 1; width: 76px; height: 76px; margin: 10px 10px 10px 0; border-radius: 6px; aspect-ratio: 1; }
+.lp-small .lp-body { grid-column: 1; grid-row: 1; }
+
+/* Per network, only what differs */
+.lp-facebook .lp-domain, .lp-linkedin .lp-domain { text-transform: uppercase; letter-spacing: .02em; }
+.lp-telegram .lp-card { border-left: 3px solid var(--wt-accent); border-radius: 6px; }
+.lp-telegram .lp-large { display: flex; flex-direction: column-reverse; }
+.lp-telegram .lp-large .lp-img { width: calc(100% - 24px); margin: 0 12px 12px; border-radius: 6px; }
+.lp-x .lp-card { border-radius: 16px; }
+.lp-viber .lp-card, .lp-whatsapp .lp-card { border-radius: 12px; }
+
+.lp-refresh p { margin: 8px 0 0; font-size: 14px; color: var(--wt-text-2); }
+.lp-refresh ul { display: grid; gap: 10px; margin: 16px 0 0; padding: 0; list-style: none; font-size: 14px; color: var(--wt-text-2); }
+.lp-refresh b { color: var(--wt-text); font-weight: 600; }
+.lp-refresh a { color: var(--wt-accent); white-space: nowrap; }
+
+@media (max-width: 760px) {
+    .lp-previews, .lp-refresh { padding: 20px; }
+    .lp-grid { grid-template-columns: 1fr; }
+}

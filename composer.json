@@ -1,0 +1,44 @@
+{
+    "name": "yu-laravel/link-preview",
+    "description": "Laravel Livewire tool that shows how a link looks when shared in messengers and social networks, and checks its Open Graph and Twitter tags.",
+    "type": "library",
+    "keywords": [
+        "laravel",
+        "livewire",
+        "open-graph",
+        "twitter-cards",
+        "link-preview"
+    ],
+    "homepage": "https://github.com/yuriyakishin/link-preview",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Yuriy Akishin",
+            "homepage": "https://yu.net.ua"
+        }
+    ],
+    "require": {
+        "php": "^8.4",
+        "ext-mbstring": "*",
+        "laravel/framework": "^13.0",
+        "livewire/livewire": "^4.0",
+        "yu-laravel/web-tools-core": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Yu\\LinkPreview\\": "src/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-main": "1.x-dev"
+        },
+        "laravel": {
+            "providers": [
+                "Yu\\LinkPreview\\LinkPreviewServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
