@@ -10,6 +10,8 @@ A Livewire tool for Laravel that shows how a link will look when it's shared, th
 
 It needs no AI. The tool reads Open Graph and Twitter tags, the title, the description and the canonical URL. It downloads the `og:image` to measure its real size and weight.
 
+![Link Preview report](images/link-preview.png)
+
 **🔗 Live example: [yu.net.ua/en/tools/link-preview](https://yu.net.ua/en/tools/link-preview)**
 
 ## What it checks
