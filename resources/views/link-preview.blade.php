@@ -35,7 +35,9 @@
     </div>
 
     @if ($report)
-        <div wire:loading.remove wire:target="analyze" aria-live="polite">
+        {{-- A new block for every check (keyed by the count), so each report scrolls the tool up to its form --}}
+        <div wire:key="wt-report-{{ $reportNumber }}" wire:loading.remove wire:target="analyze" aria-live="polite"
+             x-init="$root.scrollIntoView({ behavior: 'smooth', block: 'start' })">
             <section class="lp-previews" aria-labelledby="lp-previews-title">
                 <h3 id="lp-previews-title">{{ $t('previews.title') }}</h3>
                 <p class="lp-note">{{ $t('previews.note') }}</p>
