@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Yu\LinkPreview\Livewire;
 
 use Illuminate\Contracts\View\View;
+use Yu\LinkPreview\Events\LinkPreviewEvent;
 use Yu\LinkPreview\Services\LinkPreviewAnalyzer;
 use Yu\LinkPreview\Services\PreviewBuilder;
 use Yu\WebToolsCore\Livewire\ToolComponent;
@@ -18,6 +19,11 @@ class LinkPreviewComponent extends ToolComponent
     protected function name(): string
     {
         return 'link-preview';
+    }
+
+    protected function event(): string
+    {
+        return LinkPreviewEvent::class;
     }
 
     protected function locales(): LocaleResolver
